@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --white: #fafafb;
+    --purple:#9a67ea;
+    --blue-light:#04d4c3;
+    --blue-dark:#2a73c2;
+    --green: #2c7b90;
+    --green-checked: #42FF33;
+    --dark-main: #b69370;
+    --dark-second: #0b0b0b;
+    --line: #36322e;
+}
+
+body {
+    /* background: linear-gradient(to bottom,var(--purple),var(--blue-light)); */
+    height: 100vh;   
+    font-family: 'Prompt', sans-serif;
+}
+
+.container {
+    max-width: 80%;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+/*PERFIL*/
+
+
+
+.perfil h1 {
+    color: var(--white);
+}
+
+.perfil span {
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+#fecha {
+    color: var(--white);
+    padding: 50px 0 5px 0px;
+
+}
+
+
+
+
+/*AGREGAR TAREA*/
+
+.agregar-tarea {
+    background-color: var(--white) ;
+    border-radius: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.agregar-tarea input {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--white);
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.agregar-tarea input:focus {
+    outline-color: purple;
+    font-size: 20px;
+
+}
+  
+.agregar-tarea input::placeholder {
+   font-size: 25px;
+   /* color: var(--purple); */
+   border-color: #42FF33;
+}
+
+.agregar-tarea i{
+    font-size: 50px;
+    color: var(--purple);
+
+}
+.agregar-tarea i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+/*SECCION DE TAREA LIGHT*/
+
+.seccion-tarea h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.seccion-tarea li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom,var(--blue-dark),var(--green));
+    border-radius: 15px;
+    padding: 10px;
+    color: var(--white);
+    margin: 5px 0;
+
+}
+.seccion-tarea i {
+    font-size: 25px;
+}
+
+.seccion-tarea > ul p {
+    font-size: 1.2rem;
+
+}
+
+
+.seccion-tarea i:hover {
+    color: var(--green-checked);
+    cursor: pointer;
+}
+
+
+/*SECCION DE TAREA DARK*/
+.seccion-tarea-dark h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.seccion-tarea-dark li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--dark-main);
+    border-radius: 15px;
+    font-size: 25px;
+    padding: 10px;
+    color: var(--dark-second);
+    margin: 5px 0;
+
+}
+
+.seccion-tarea-dark > ul p {
+    font-size: 1.2rem;
+
+}
+
+
+.seccion-tarea-dark i:hover {
+    color: var(--green-checked);
+    cursor: pointer;
+}
+
+.line-through{
+    text-decoration: line-through 3px red;
+    color: var(--line);
+} 
+/* valid section */
+.checked{
+    color: var(--green-checked);
+}
+
+.text{
+    word-wrap: break-word; 
+    max-width: 85%;
+}
+
+
+.is-invalid {
+    display: block;
+    color: red;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none{
+    visibility: hidden;
+}
+
+/* DARK MODE */
+
+.dark-theme-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right:  1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: yellow;
+    color: var(--second-color);
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease-out;
+}
+
+.dark-theme-btn:hover {
+    background-color: #7388ffe5;
+    color: var(--main-color);
+}
+
+.dark-mode{
+    background-color: rgba(0, 0, 0, 0.897);
+    color: var(--main-color);
+}
+
+.light-mode{
+    background: linear-gradient(to bottom, var(--purple), var(--blue-light));
+}
